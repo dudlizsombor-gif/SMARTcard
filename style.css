@@ -1,0 +1,473 @@
+html{
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+  
+body{
+    background-color: #614674;
+    color: white;
+    margin: 0;
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+a, a:hover,  a:active {
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    color: white;
+  }
+
+.doboz{
+    background-color: #7a5a91;
+    background-image: url('img/contactonomy-background.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.row, .row2{
+    margin-top: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /*border: 1px solid white;*/
+}
+
+.row{
+    margin-top: 15px;
+}
+
+.profileHolder{
+    margin-top: 4vh;
+    margin-bottom: 10px;
+    width: 55vw;
+    height: 55vw;
+    max-width: 350px;
+    max-height: 350px;
+    /*background: blue;*/
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: solid 5px #5d015b;
+}
+
+.profilePic{
+    margin: 7px;
+    width: calc(100% - 14px);
+    height: calc(100% - 14px);
+    background: url('profile.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+
+@media screen and (orientation: portrait) {
+    .doboz {
+        max-width: 520px;
+    }
+}
+  
+@media screen and (orientation: landscape) {
+    .doboz {
+        /*width: 40vh;*/
+        margin-top: 10px;
+        margin-bottom: 10px;
+        max-width: 380px;
+        background-size: inherit;
+        /*box-shadow: 0px 0px 15px rgba(255,255,255,0.5);*/
+    }
+    .profileHolder{
+        max-width: 260px;
+        max-height: 260px;
+    }
+}
+
+h1, h4{
+    font-weight: 600;
+}
+
+h4{
+    line-height: 0.4em;
+    font-size: 1.1em;
+    color: #000000;
+}
+
+h2{
+    color: #8FC640;
+}
+
+/* -------------- btn -------------- */
+
+.btn, .btnx {
+    background-color: #E6E7E8;
+    border-radius: 10px;
+    color: #232526;
+    border: none;
+    text-decoration: none;
+    background-image: url('img/02-save-my-contact-details.svg');
+    background-repeat: no-repeat;
+    background-position: 8px 50%;
+    background-size: 28px;
+    padding: 7px 10px 6px 40px; 
+    font-size: 19px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.btnx{
+    background-image: url('img/01-continue-to-my-digital-business-card.svg');
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: 800;
+}
+
+.btn:active,
+.btn:focus,
+.btnx:active,
+.btnx:focus{
+    color: #232526;
+    background-color: #E6E7E8;
+}
+
+.btnHover:hover,
+.btnxHover:hover {
+    color: #232526;
+    background-color: #5d015b;
+}
+
+@media screen and (min-width: 1100px){
+    .btn:hover,
+    .btnx:hover
+    {
+        color: #232526;
+        background-color: #5d015b;
+    }
+}
+
+/* -------------- main-contacts -------------- */
+
+.main-contacts {
+    color:#E6E7E8;
+    font-size: 19px;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 20%;
+    transition: 0.5s;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    /*border: 1px white solid;*/
+}
+
+.main-contacts-buttIcon{
+    width: 52px;
+    fill: #E6E7E8;
+    transition: 0.5s;
+}
+
+/* svg csel! */
+.csel{
+    stroke: #E6E7E8;
+    transition: 0.5s;
+}
+
+.main-contacts:active,
+.main-contacts:focus{
+    color:#E6E7E8;
+}
+
+.main-contacts-hover:hover,
+.main-contacts-hover:hover .main-contacts-buttIcon
+{
+    color: #5d015b;
+    fill: #5d015b;
+    
+}
+
+.main-contacts-hover:hover .main-contacts-buttIcon .csel{
+    stroke: #5d015b;
+}
+
+@media screen and (min-width: 1100px){
+    .main-contacts:hover,
+    .main-contacts:hover .main-contacts-buttIcon
+    {
+        color: #5d015b;
+        fill: #5d015b;
+    }
+    .main-contacts:hover .main-contacts-buttIcon .csel{
+        stroke: #5d015b;
+    }
+}
+
+/* -------------- main-contacts-small -------------- */
+
+.main-contacts-small {
+    color:#E6E7E8;
+    font-size: 19px;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 15%;
+    transition: 0.5s;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    /*border: 1px white solid;*/
+}
+
+.main-contacts-buttIcon-small{
+    width: 40px;
+    fill: #E6E7E8;
+    transition: 0.5s;
+}
+
+.main-contacts-small:active,
+.main-contacts-small:focus{
+    color:#E6E7E8;
+}
+
+.main-contacts-small-hover:hover,
+.main-contacts-small-hover:hover .main-contacts-buttIcon-small
+{
+    color: #5d015b;
+    fill: #5d015b;
+    
+}
+
+.main-contacts-small-hover:hover .main-contacts-buttIcon-small .csel{
+    stroke: #5d015b;
+}
+
+@media screen and (min-width: 1100px){
+    .main-contacts-small:hover,
+    .main-contacts-small:hover .main-contacts-buttIcon-small
+    {
+        color: #5d015b;
+        fill: #5d015b;
+    }
+    .main-contacts-small:hover .main-contacts-buttIcon-small .csel{
+        stroke: #5d015b;
+    }
+}
+
+/* -------------- company -------------- */
+   
+.company{
+    width: 100%;
+    margin-top: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #414042;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cmenu{
+    width: 38%;
+    padding-top: 34px;
+    padding-bottom: 10px;
+}
+
+.org {
+    color: #5d015b;
+    font-size: 19px;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 8%;
+    transition: 0.5s;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    /*border: 1px white solid;*/
+}
+
+.org-buttIcon{
+    width: 32px;
+    fill: #5d015b;
+    transition: 0.5s;
+}
+
+.org:active,
+.org:focus{
+    color:#5d015b;
+}
+
+.org-hover:hover,
+.org-hover:hover .org-buttIcon
+{
+    color: #E6E7E8;
+    fill: #E6E7E8;
+}
+
+.org-hover:hover .org-buttIcon .csel{
+    stroke: #E6E7E8;
+}
+
+@media screen and (min-width: 1100px){
+    .org:hover,
+    .org:hover .org-buttIcon
+    {
+        color: #E6E7E8;
+        fill: #E6E7E8;
+    }
+    .org:hover .org-buttIcon .csel{
+        stroke: #E6E7E8;
+    }
+}
+
+/* -------------- top -------------- */
+
+.top {
+    color:#808285;
+    font-size: 19px;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 12%;
+    transition: 0.5s;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    /*border: 1px white solid;*/
+}
+
+.top-buttIcon{
+    width: 38px;
+    fill: #808285;
+    transition: 0.5s;
+}
+
+.top:active,
+.top:focus{
+    color:#808285;
+}
+
+.top-hover:hover,
+.top-hover:hover .top-buttIcon
+{
+    color: #5d015b;
+    fill: #5d015b;
+}
+
+.top-hover:hover .top-buttIcon .csel{
+    stroke: #5d015b;
+}
+
+@media screen and (min-width: 1100px){
+    .top:hover,
+    .top:hover .top-buttIcon
+    {
+        color: #5d015b;
+        fill: #5d015b;
+    }
+    .top:hover .top-buttIcon .csel{
+        stroke: #5d015b;
+    }
+}
+
+/* -------------- form -------------- */
+
+.contactus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.elem,
+.cbox
+{
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.cbox{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.elem input[type="text"]
+{
+    width: 80%;
+    background: none;
+    border: 0;
+    border-bottom: 2px solid #8fc640;
+    color: white;
+    background-color: #232526;
+    padding: 10px;
+    transition: all .4s ease-in-out;
+    margin: 10px 30px;
+    text-align: center;
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.elem textarea:focus, .elem input[type="text"]:focus{
+    outline: none;
+	font-style: normal;
+}
+
+.elem input:-webkit-autofill, .elem textarea:-webkit-autofill {
+    background-color: #808285;
+    background-image: none;
+	/*color: white;*/
+    /*border-bottom: 2px solid #1a592d;*/
+	transition: background-color 5000s;
+}
+
+::-webkit-input-placeholder { /* Edge */
+    color: #aaaaaa;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer */
+    color: #aaaaaa;
+  }
+  
+  ::placeholder {
+    color: #aaaaaa;
+  }

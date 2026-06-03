@@ -1,0 +1,121 @@
+/* ----- MODAL -------- */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  margin: auto;
+  width: 80%;
+  /*min-width: 250px;*/
+  max-width: 320px;
+  /*box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);*/
+  animation-name: modalopen;
+  animation-duration: 1s; /*--modal-duration*/
+  /*border-radius: 5px;*/
+}
+
+.modal-body {
+  padding: 0px 0px;
+  margin: 0px;
+  /*background:#F1F2F2;*/
+  text-align:center;
+}
+
+.modal-body a {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.modal-body a:hover {
+  opacity: .8;
+  text-decoration: none;
+}
+
+.modal-body img{
+  box-shadow: 0px 0px 15px #353839;
+  /*border-radius: 5px;*/
+}
+
+.close {
+  margin: 7px;
+  /*color: #4d4d4d;*/
+  color: #F1F2F2;
+  float: right;
+  width: 19px;
+  height: 19px;
+  /*font-size: 30px;
+  border: solid #4d4d4d 2px;*/
+  /*#58595b*/
+  position: relative;
+  top: 0px;
+  right: 0px;
+}
+
+.close:hover,
+.close:focus {
+  /*color: #4d4d4d;*/
+  color: #F1F2F2;
+  transform: rotate(90deg);
+  transition: .3s;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.howtoSave{
+  width: 70%;
+  max-width: 300px;
+  padding:10px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 15px #8FC640;
+  /*border: 1px solid white;*/
+  background-color: #232526; /*#333435*/
+  font-size: 22px;
+}
+
+.vastag{
+  font-weight: 800;
+}
+
+.zold{
+  color: #8FC640;
+}
+
+.closex {
+  margin: 7px;
+  color: #F1F2F2;
+  float: right;
+  width: 19px;
+  height: 19px;
+  /*position: relative;
+  top: -10px;
+  right: -10px;*/
+}
+
+.closex:hover,
+.closex:focus {
+  /*color: #4d4d4d;*/
+  color: #F1F2F2;
+  transform: rotate(90deg);
+  transition: .3s;
+  text-decoration: none;
+  cursor: pointer;
+}
